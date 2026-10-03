@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@400;600&display=swap');
+
+:root {
+  --night: #2e1a2b;
+  --panel: #43263d;
+  --sand: #fbefd9;
+  --mustard: #f2a900;
+  --orange: #e8641b;
+  --red: #c8102e;
+  font-family: 'Work Sans', system-ui, sans-serif;
+  color: var(--sand);
+  background: var(--night);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--night);
+}
+
+#root {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.station-header { text-align: center; margin-bottom: 2.5rem; }
+
+.call-letters {
+  font-family: 'Righteous', 'Arial Black', sans-serif;
+  font-weight: 400;
+  font-size: clamp(4.5rem, 18vw, 9rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-shadow:
+    4px 4px 0 var(--mustard),
+    8px 8px 0 var(--orange),
+    12px 12px 0 var(--red);
+}
+
+.slogan {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.75rem;
+  color: var(--mustard);
+  margin: 1.5rem 0 0.25rem;
+}
+
+.location { margin: 0; opacity: 0.8; }
+
+.stream-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--panel);
+  border: 2px solid var(--mustard);
+  border-radius: 999px;
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.now-playing { display: flex; align-items: center; gap: 0.75rem; }
+
+.live-badge {
+  background: #e10600;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.player-station { font-family: 'Righteous', sans-serif; font-size: 1.5rem; }
+
+.controls { display: flex; gap: 0.5rem; }
+
+.controls button {
+  width: 3.25rem;
+  height: 3.25rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--mustard);
+  color: var(--night);
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.controls button:hover { background: var(--orange); }
+.controls button:focus-visible { outline: 3px solid var(--sand); outline-offset: 3px; }
+
+h2 { font-family: 'Righteous', sans-serif; font-weight: 400; }
+
+.leaflet-container {
+  border: 2px solid var(--mustard);
+  border-radius: 16px;
+}
+
+@media (max-width: 480px) {
+  .stream-player { flex-direction: column; border-radius: 24px; padding: 1rem; }
+}
